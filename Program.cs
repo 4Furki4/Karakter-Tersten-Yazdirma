@@ -6,7 +6,12 @@ namespace KarakterTerstenYazdırma
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Konsol_Islemleri konsol= new Konsol_Islemleri();
+            TerstenYazdırma terstenYazdırma= new TerstenYazdırma();
+            konsol.GirisMesaji();
+            string[] cumleler= konsol.CumleleriAlma();
+            string[] YeniCumleler=terstenYazdırma.TersCevir(cumleler);
+            terstenYazdırma.KelimeleriYazdırma(YeniCumleler);
         }
     }
 }
